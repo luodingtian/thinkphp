@@ -1,0 +1,265 @@
+<extend name="Base/base"/>
+<block name="head">
+	<link rel="stylesheet" href="__PUBLIC__/frame/swiper/css/swiper.min.css">
+</block>
+<block name="style">
+	<style>
+		.header-in{
+			width: 1200px;
+			margin: 0 auto;
+			height:70px;
+			position: relative;
+
+		}
+		.name-en{
+			display: inline-block;
+			zoom: 0.5;
+		}
+		.user-wrap{
+			line-height: 80px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+
+		}
+		.logo-wrap{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-o-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+		.body{
+
+			width: 1220px;
+			height: 700px;
+			padding: 10px;
+			border-radius: 10px;
+			box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.08);
+			margin: 50px auto;
+		}
+		/*swiper*/
+		.swiper-container {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.swiper-slide {
+			background-size: cover;
+			background-position: center;
+		}
+		.gallery-top {
+			height: 80%;
+			width: 100%;
+		}
+		.gallery-thumbs {
+			height: 20%;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+		.gallery-thumbs .swiper-slide {
+			height: 100%;
+			opacity: 0.4;
+		}
+		.gallery-thumbs .swiper-slide-active {
+			opacity: 1;
+		}
+
+		.swiper-wrap{
+			width: 900px;
+			height: 100%;
+
+		}
+		.login-wrap{
+			width: 290px;
+			height: 100%;
+			margin-left: 10px;
+			border-left: 1px solid #eee;
+		}
+		.input-wrap{
+			width: 240px;
+			margin: 10px auto;
+			border: 1px solid #ccc;
+			padding: 6px 12px;
+			border-radius: 3px;
+		}
+		.input-wrap input{
+			border: none;
+		}
+		.psw-wrap{
+			width: 240px;
+			margin: 10px auto;
+		}
+		.remember-btn{
+			vertical-align: middle;
+			width: 15px;
+			height: 15px;
+		}
+		.remember-tip{
+			vertical-align: middle;
+		}
+		.btn-warp button{
+			width: 110px;
+		}
+		.news-wrap{
+			width: 240px;
+			margin: 30px auto 0;
+			padding: 10px 0;
+
+			border-top: 1px solid #ddd;
+
+		}
+		.news-content{
+			height: 380px;
+		}
+	</style>
+</block>
+<block name="main">
+	<div class="header my-bg-white">
+		<div class="header-in my-cf">
+			<table class="logo-wrap">
+				<tr>
+					<td rowspan="2" width="50">
+						<img src="__PUBLIC__/mylib/img/logo.png" width="40" height="40" alt="logo">
+					</td>
+					<td>
+						<span class="my-font-12 my-bolder">泛能船舶云监控</span>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span class="my-font-10 my-cl-grey name-en">FUNENERGY CLOUD CONTROL SYSTEM</span>
+					</td>
+				</tr>
+			</table>
+			<div class="user-wrap ">
+				<img src="__PUBLIC__/mylib/img/user-f.png">
+				<span class="my-cl-grey my-margin-l5">未登录</span>
+			</div>
+		</div>
+	</div>
+	<div class="body my-bg-white my-cf">
+		<div class="swiper-wrap my-fl">
+			<!-- Swiper -->
+			<div class="swiper-container gallery-top">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s1.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s2.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s3.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s4.jpg)"></div>
+				</div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next swiper-button-white"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>
+			</div>
+			<div class="swiper-container gallery-thumbs">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s1.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s2.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s3.jpg)"></div>
+					<div class="swiper-slide" style="background-image:url(__PUBLIC__/mylib/img/s4.jpg)"></div>
+				</div>
+			</div>
+		</div>
+		<div class="login-wrap my-fr">
+			<div class="my-font-12 my-margin-t10 my-bolder" align="center">用户登录</div>
+			<div class="input-wrap">
+				<img src="__PUBLIC__/mylib/img/user-e.png" alt="">
+				<input class="my-margin-l5" type="text" id="admin_name" placeholder="账号/手机号">
+			</div>
+			<div class="input-wrap my-margin-t20">
+				<img src="__PUBLIC__/mylib/img/lock.png" alt="">
+				<input class="my-margin-l5" type="password" id="password" placeholder="登陆密码">
+			</div>
+			<div class="psw-wrap my-margin-t20 my-cf">
+				<!--<span class="my-fl ">
+					<input type="checkbox" name=""  lay-skin="primary" class="remember-btn">
+					<span class="remember-tip my-cl-grey">记住密码</span>
+				</span>
+				<span class="my-cl-grey my-fr">忘记密码?</span>-->
+				<div class="my-cf"></div>
+				<div class="btn-warp my-cf my-margin-t15">
+					<button class="layui-btn layui-btn-large login-btn my-fl submit_btn">登陆</button>
+					<button class="layui-btn layui-btn-large layui-btn-primary register-btn my-fr">注册</button>
+				</div>
+			</div>
+
+			<div class="news-wrap">
+				<div align="center" class="my-font-14 my-bolder">最新公告</div>
+				<div class="my-margin-t15 news-content">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从技术和实用性上来讲，船舶的电动化还是受制于电池续航能力、充电速度和充电设施分布情况等;
+					近日，媒体报道由大连玉柴能源有限公司开发建造的LNG（液化天然气）动力示范船“运河之星2000e”，在江苏连云港成功下水。这是中国第一艘内河纯LNG电力推进的船舶，完全按照CCS标准建造。“运河之星2000e”采用纯LNG电力推进系统，具有“安全、经济、绿色、智能、无噪、先进”六大特点。动力系统采用自主研发的“银河动力EYS249-2”动力包，操纵智能便捷，搭载玉柴YC6T340NL-C20纯气体发动机为原动机的发电机组，使发动机处于经济工况下运行，真正达到高效节能、更适航的目的。
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+
+</block>
+<block name="script">
+	<script src="__PUBLIC__/frame/swiper/js/swiper.min.js"></script>
+	<script type="text/javascript">
+		//init swiper
+		var galleryTop = new Swiper('.gallery-top', {
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			spaceBetween: 10,
+			loop:true,
+			autoplay:3000,
+			speed:1000,
+			loopedSlides: 5//looped slides should be the same
+		});
+		var galleryThumbs = new Swiper('.gallery-thumbs', {
+			spaceBetween: 10,
+			slidesPerView: 4,
+			touchRatio: 0.2,
+			loop:true,
+			loopedSlides: 5, //looped slides should be the same
+			slideToClickedSlide: true
+		});
+		galleryTop.params.control = galleryThumbs;
+		galleryThumbs.params.control = galleryTop;
+
+		layui.use(['form','element','layer'], function () {
+			var form=layui.form();
+			var layer=layui.layer;
+		})
+
+		//登录链接测试，使用时可删除
+		$(".submit_btn").click(function(){
+			login()
+		});
+
+		$("body").keydown(function() {
+			if (event.keyCode == "13") {
+				login()
+			}
+		});
+		function login(){
+			var admin_name = $('#admin_name').val();
+			var password = $('#password').val();
+			var remember = $('.remember-btn').is(':checked');
+
+			var url = "{:U('Login/dologin')}";
+			jQuery.getJSON(url,{name:admin_name,pwd:password,remember:remember},
+					function (data) {
+						if(data.res == 0){
+							layer.msg(data.word);return false;
+						}
+						window.location.href="{:U('Index/index')}";
+					})
+
+		}
+	</script>
+
+</block>
