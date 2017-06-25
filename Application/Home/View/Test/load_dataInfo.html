@@ -1,0 +1,388 @@
+<ul class="total-ul my-cf">
+    <li>
+        <div id="panel-v" style="width: 100%;height:300px;"></div>
+        <span class="v-title">电压/V</span>
+    </li>
+    <li>
+        <div id="panel-r" style="width: 100%;height:300px;"></div>
+        <span class="r-title">转速/km</span>
+    </li>
+    <li>
+        <div id="panel-a" style="width: 100%;height:300px;"></div>
+        <span class="a-title">电流/A</span>
+    </li>
+</ul>
+<span class="info-title">系统状态</span>
+<div class="data-wrap my-cf my-margin-t20">
+    <ul class="data-ul my-cf">
+        <li>
+            <div class="my-cl-grey system-title">太阳能发系统</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>左光伏充电电压（V）</td>
+                    <td>{:countten($sdata[120].$sdata[121])}</td>
+                    <td>右光伏充电电压（V）</td>
+                    <td>{:countten($sdata[124].$sdata[125])}</td>
+                </tr>
+                <tr>
+                    <td>左光伏充电电流（A）</td>
+                    <td>{:countten($sdata[122].$sdata[123])}</td>
+                    <td>右光伏充电电流（A）</td>
+                    <td>{:countten($sdata[126].$sdata[127])}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>
+            <div class="my-cl-grey system-title">防火系统</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr >
+                    <td>状态</td>
+                    <td <if condition="$sdata[132] eq 0">class="my-bg-green my-cl-white"</if> >安全</td>
+                    <td <if condition="$sdata[132] eq 1">class="my-bg-danger my-cl-white"</if> >报警</td>
+                    <td class="my-bg-danger my-cl-white">{$sdata[132]|hexdec}</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+
+    <ul class="data-ul my-cf">
+        <if condition="is_none($sdata[4].$sdata[5],$sdata[14],$sdata[6].$sdata[7],$sdata[8].$sdata[9]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#1锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[4].$sdata[5])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[14]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[6].$sdata[7])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[8].$sdata[9])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[10].$sdata[11])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[10].$sdata[11])}</td>
+                </tr>
+                <tr>
+                    <td>温度℃</td>
+                    <td>{$sdata[13]|hexdec}</td>
+                    <td>故障</td>
+                    <td>{$sdata[15]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+        <if condition="is_none($sdata[16].$sdata[17],$sdata[26],$sdata[18].$sdata[19],$sdata[20].$sdata[21]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#2锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[16].$sdata[17])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[26]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[18].$sdata[19])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[20].$sdata[21])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[22].$sdata[23])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[22].$sdata[23])}</td>
+                </tr>
+                <tr>
+                    <td>温度℃</td>
+                    <td>{$sdata[24]|hexdec}</td>
+                    <td>故障</td>
+                    <td>{$sdata[27]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+        <if condition="is_none($sdata[28].$sdata[29],$sdata[38],$sdata[30].$sdata[31],$sdata[32].$sdata[33]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#3锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[28].$sdata[29])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[38]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[30].$sdata[31])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[32].$sdata[33])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[34].$sdata[35])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[34].$sdata[35])}</td>
+                </tr>
+                <tr>
+                    <td>温度</td>
+                    <td>{$sdata[36]|hexdec}℃</td>
+                    <td>故障</td>
+                    <td>{$sdata[39]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+        <if condition="is_none($sdata[40].$sdata[41],$sdata[50],$sdata[42].$sdata[43],$sdata[44].$sdata[45]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#4锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[40].$sdata[41])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[50]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[42].$sdata[43])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[44].$sdata[45])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[46].$sdata[47])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[46].$sdata[47])}</td>
+                </tr>
+                <tr>
+                    <td>温度℃</td>
+                    <td>{$sdata[48]|hexdec}</td>
+                    <td>故障</td>
+                    <td>{$sdata[51]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+        <if condition="is_none($sdata[52].$sdata[53],$sdata[62],$sdata[54].$sdata[55],$sdata[56].$sdata[57]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#5锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[52].$sdata[53])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[62]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[54].$sdata[55])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[56].$sdata[57])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[58].$sdata[59])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[58].$sdata[59])}</td>
+                </tr>
+                <tr>
+                    <td>温度℃</td>
+                    <td>{$sdata[60]|hexdec}</td>
+                    <td>故障</td>
+                    <td>{$sdata[63]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+        <if condition="is_none($sdata[64].$sdata[65],$sdata[74],$sdata[66].$sdata[67],$sdata[68].$sdata[69]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#6锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[64].$sdata[65])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[74]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[66].$sdata[67])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[68].$sdata[69])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[70].$sdata[71])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[70].$sdata[71])}</td>
+                </tr>
+                <tr>
+                    <td>温度℃</td>
+                    <td>{$sdata[72]|hexdec}</td>
+                    <td>故障</td>
+                    <td>{$sdata[75]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+        <if condition="is_none($sdata[76].$sdata[77],$sdata[86],$sdata[78].$sdata[79],$sdata[80].$sdata[81]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#7锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[76].$sdata[77])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[86]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[78].$sdata[79])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[80].$sdata[81])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[82].$sdata[83])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[82].$sdata[83])}</td>
+                </tr>
+                <tr>
+                    <td>温度℃</td>
+                    <td>{$sdata[84]|hexdec}</td>
+                    <td>故障</td>
+                    <td>{$sdata[87]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+        <if condition="is_none($sdata[88].$sdata[89],$sdata[98],$sdata[90].$sdata[91],$sdata[92].$sdata[93]) neq 0">
+        <li>
+            <div class="my-cl-grey system-title">#8锂电池</div>
+            <table class="layui-table today-tab my-radius-10 " lay-skin="line" >
+                <tbody>
+                <tr>
+                    <td>电压(V)</td>
+                    <td>{:countten($sdata[88].$sdata[89])}</td>
+                    <td>电量</td>
+                    <td>{$sdata[98]|hexdec}%</td>
+                </tr>
+                <tr>
+                    <td>单体H(mv)</td>
+                    <td>{:countone($sdata[90].$sdata[91])}</td>
+                    <td>单体L(mv)</td>
+                    <td>{:countone($sdata[92].$sdata[93])}</td>
+                </tr>
+                <tr>
+                    <td>充电流(A)</td>
+                    <td>{:countminus1($sdata[94].$sdata[95])}</td>
+                    <td>放电流(A)</td>
+                    <td>{:countminus2($sdata[94].$sdata[95])}</td>
+                </tr>
+                <tr>
+                    <td>温度℃</td>
+                    <td>{$sdata[96]|hexdec}</td>
+                    <td>故障</td>
+                    <td>{$sdata[99]|hexdec}</td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+        </if>
+    </ul>
+</div>
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChartV = echarts.init(document.getElementById('panel-v'));
+    var myChartR = echarts.init(document.getElementById('panel-r'));
+    var myChartA = echarts.init(document.getElementById('panel-a'));
+
+    // 指定图表的配置项和数据
+    optionV = {
+        tooltip : {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '电压',
+                type: 'gauge',
+                detail: {formatter:'{value}'},
+                data: [{value: "{:countten($sdata[102].$sdata[103])}", name: ''}]
+            }
+        ]
+    };
+    optionR = {
+        tooltip : {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '转速',
+                type: 'gauge',
+                detail: {formatter:'{value}'},
+                data: [{value: "{:countone($sdata[104].$sdata[105])}", name: ''}]
+            }
+        ]
+    };
+    optionA = {
+        tooltip : {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '电流',
+                type: 'gauge',
+                detail: {formatter:'{value}'},
+                data: [{value: "{:countten($sdata[102].$sdata[103])}", name: ''}]
+            }
+        ]
+    };
+    myChartV.setOption(optionV);
+    myChartR.setOption(optionR);
+    myChartA.setOption(optionA);
+</script>

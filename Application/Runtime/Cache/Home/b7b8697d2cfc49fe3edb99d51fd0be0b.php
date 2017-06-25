@@ -9,12 +9,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/global.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/bootstrap/css/bootstrap.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/layui/css/layui.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/mylib/css/common.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/global.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/layui/css/layui.css" media="all">
+    <!--<link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/common.css" media="all">-->
     <link rel="stylesheet" href="//at.alicdn.com/t/font_lhdrjs93f475vcxr.css">
-    <script type="text/javascript" src="/think/Public/mylib/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/jquery-1.11.1.min.js"></script>
     
 
 
@@ -472,7 +472,7 @@
 
 
 
-    <script type="text/javascript" src="/think/Public/frame/layui/layui.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/frame/layui/layui.js"></script>
     <script>
         //实例化 layer
         layui.use('layer', function(){
@@ -488,12 +488,12 @@
     </script>
 
 
-    <script type="text/javascript" src="/think/Public/mylib/js/fontchange.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/fontchange.js"></script>
 
 
-    <script type="text/javascript" src="/think/Public/frame/layui/lay/modules/form.js"></script>
-    <script type="text/javascript" src="/think/Public/frame/layui/lay/modules/laydate.js"></script>
-    <script type="text/javascript" src="/think/Public/mylib/js/echarts.min.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/frame/layui/lay/modules/form.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/frame/layui/lay/modules/laydate.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/echarts.min.js"></script>
 
     <script>
         layui.use(['jquery','layer','element','laypage','laydate','form'],function(){

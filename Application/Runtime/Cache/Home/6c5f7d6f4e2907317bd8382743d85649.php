@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>泛能船舶后台管理</title>
+    <title>蓝色方程学习系统</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/global.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/bootstrap/css/bootstrap.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/layui/css/layui.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/mylib/css/common.css" media="all">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_lhdrjs93f475vcxr.css">
-    <script type="text/javascript" src="/think/Public/mylib/js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/global.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/myBase.css" media="all">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_xu6iuc22e351att9.css">
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/jquery-1.11.1.min.js"></script>
     
-	<link rel="stylesheet" type="text/css" href="/think/Public/app/css/adminstyle.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/thinkphp/Public/app/css/adminstyle.css" media="all">
 
     
 </head>
@@ -28,8 +28,8 @@
 			<!-- logo区域 -->
 			<div class="admin-logo-box">
 				<span class="logo-td">
-					<i class="iconfont icon-admin my-font-25 "></i>
-					<span class="logo-name my-margin-l10" title="logo">后台管理</span>
+					<i class="iconfont icon-code my-font-25 "></i>
+					<span class="logo-name my-margin-l10" title="logo">蓝色方程</span>
 				</span>
 			</div>
 			<!--<div class="larry-side-menu">
@@ -37,12 +37,12 @@
 			</div>-->
 			<!-- 右侧导航 -->
 			<span class="account">
-					<img class="header-img my-valign-m" src="/think/Public/app/img/head.png" alt="头像" >
-					<span class="my-valign-m my-margin-l5">黑客与画家</span>
+					<img class="header-img my-valign-m" src="/thinkphp/Public/app/img/head.png" alt="头像" >
+					<span class="my-valign-m my-margin-l5"><?php echo ($username); ?></span>
 				</span>
 			<div class="account-wrap">
 				<span class="exit">
-					<a href="login.html" >
+					<a href="<?php echo U('Login/dologout');?>" >
 						<i class="iconfont icon-shutdown my-font-25 my-cl-them"></i>
 					</a>
 				</span>
@@ -60,41 +60,25 @@
 						</a>
 					</li>-->
 					<!-- 个人信息 -->
-					<li class="layui-nav-item layui-nav-itemed">
+					<li class="layui-nav-item layui-nav-itemed ">
 						<a href="javascript:;">
-							<i class="iconfont icon-statistic" ></i>
-							<span>后台管理</span>
+							<i class="iconfont icon-code-e" ></i>
+							<span>我的课程</span>
 							<em class="layui-nav-more"></em>
 						</a>
 						<dl class="layui-nav-child">
 							<dd class="layui-this">
-								<a href="javascript:;" data-url="shipList.html">
-									<i class="iconfont icon-ship"></i>
-									<span>船舶列表</span>
+								<a href="javascript:;" data-url="<?php echo U('myCourse');?>">
+									<i class="iconfont icon-php"></i>
+									<span>PHP</span>
 								</a>
 							</dd>
+						</dl>
+						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:;" data-url="data.html">
-									<i class="iconfont icon-shuju"></i>
-									<span>数据中心</span>
-								</a>
-							</dd>
-							<dd>
-								<a href="javascript:;" data-url="addShip.html">
-									<i class="iconfont icon-jia" ></i>
-									<span>添加船舶</span>
-								</a>
-							</dd>
-							<dd>
-								<a href="javascript:;" data-url="control.html">
-									<i class="iconfont icon-control" ></i>
-									<span>控制船舶</span>
-								</a>
-							</dd>
-							<dd>
-								<a href="javascript:;" data-url="map.html">
-									<i class="iconfont icon-dingwei" ></i>
-									<span>船舶定位</span>
+								<a href="javascript:;" data-url="">
+									<i class="iconfont icon-h5"></i>
+									<span>HTML</span>
 								</a>
 							</dd>
 						</dl>
@@ -108,11 +92,11 @@
 		<div class="layui-body" id="larry-body" style="bottom: 0;border-left: solid 5px #0099ff;">
 			<div class="layui-tab layui-tab-card larry-tab-box" id="larry-tab" lay-filter="demo" lay-allowclose="true">
 				<ul class="layui-tab-title">
-					<li class="layui-this" id="admin-home"><i class="iconfont icon-ship"></i><em>船舶列表</em></li>
+					<li class="layui-this" id="admin-home"><i class="iconfont icon-ship"></i><em>我的课程</em></li>
 				</ul>
 				<div class="layui-tab-content" style="min-height: 150px; ">
 					<div class="layui-tab-item layui-show">
-						<iframe class="larry-iframe" data-id='0' src="shipList.html"></iframe>
+						<iframe class="larry-iframe" data-id='0' src="<?php echo U('myCourse');?>"></iframe>
 					</div>
 				</div>
 			</div>
@@ -122,8 +106,8 @@
 		<!-- 底部区域 -->
 		<div class="layui-footer layui-larry-foot" id="larry-footer">
 			<div class="layui-mian">
-				<div class="larry-footer-left">
-					<a href="http://www.itnang.com">泛能船舶管理&copy;2017</a>
+				<div class="larry-footer-left my-bolder">
+					蓝色方程学习系统&copy;2017
 				</div>
 			</div>
 		</div>
@@ -131,7 +115,7 @@
 	<!-- 加载js文件-->
 
 
-    <script type="text/javascript" src="/think/Public/frame/layui/layui.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/frame/layui/layui.js"></script>
     <script>
         //实例化 layer
         layui.use('layer', function(){
@@ -148,8 +132,8 @@
 
 
 
-	<script type="text/javascript" src="/think/Public/app/js/larry.js"></script>
-	<script type="text/javascript" src="/think/Public/app/js/index.js"></script>
+	<script type="text/javascript" src="/thinkphp/Public/app/js/larry.js"></script>
+	<!--<script type="text/javascript" src="/thinkphp/Public/app/js/index.js"></script>-->
 
 </body>
 </html>

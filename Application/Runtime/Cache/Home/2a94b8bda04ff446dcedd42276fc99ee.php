@@ -9,14 +9,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <!--<link rel="stylesheet" type="text/css" href="/think/Public/frame/global.css" media="all">-->
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/bootstrap/css/bootstrap.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/layui/css/layui.css" media="all">
-    <!--<link rel="stylesheet" type="text/css" href="/think/Public/mylib/css/common.css" media="all">-->
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/global.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/myBase.css" media="all">
     <link rel="stylesheet" href="//at.alicdn.com/t/font_lhdrjs93f475vcxr.css">
-    <script type="text/javascript" src="/think/Public/mylib/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/jquery-1.11.1.min.js"></script>
     
-	<link rel="stylesheet" type="text/css" href="/think/Public/app/css/adminstyle.css" media="all">
+	<link rel="stylesheet" type="text/css" href="/thinkphp/Public/app/css/adminstyle.css" media="all">
 
     
 </head>
@@ -37,7 +37,7 @@
 			</div>-->
 			<!-- 右侧导航 -->
 			<span class="account">
-					<img class="header-img my-valign-m" src="/think/Public/app/img/head.png" alt="头像" >
+					<img class="header-img my-valign-m" src="/thinkphp/Public/app/img/head.png" alt="头像" >
 					<span class="my-valign-m my-margin-l5"><?php echo ($username); ?></span>
 				</span>
 			<div class="account-wrap">
@@ -125,7 +125,7 @@
 	<!-- 加载js文件-->
 
 
-    <script type="text/javascript" src="/think/Public/frame/layui/layui.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/frame/layui/layui.js"></script>
     <script>
         //实例化 layer
         layui.use('layer', function(){
@@ -142,8 +142,8 @@
 
 
 
-	<script type="text/javascript" src="/think/Public/app/js/larry.js"></script>
-	<!--<script type="text/javascript" src="/think/Public/app/js/index.js"></script>-->
+	<script type="text/javascript" src="/thinkphp/Public/app/js/larry.js"></script>
+	<!--<script type="text/javascript" src="/thinkphp/Public/app/js/index.js"></script>-->
 
 </body>
 </html>

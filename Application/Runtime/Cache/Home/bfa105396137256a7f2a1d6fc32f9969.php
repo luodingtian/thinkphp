@@ -9,12 +9,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/global.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/bootstrap/css/bootstrap.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/layui/css/layui.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/mylib/css/common.css" media="all">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_lhdrjs93f475vcxr.css">
-    <script type="text/javascript" src="/think/Public/mylib/js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/global.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/myBase.css" media="all">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_xu6iuc22e351att9.css">
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/jquery-1.11.1.min.js"></script>
     
     
     <style>
@@ -41,23 +41,24 @@
 
     <a href="">刷新</a>
     <div class="account-panel">
+        <!--<form action="<?php echo U();?>" method="post">-->
         <table class="my-width-100 account-tab">
             <tr>
                 <td>船舶名称</td>
                 <td align="right">
                     <div class="layui-input-inline">
-                        <input type="tel" name="phone"   placeholder="请输入船舶名称" autocomplete="off" class="layui-input">
+                        <input type="tel" name="name"    placeholder="请输入船舶名称" autocomplete="off" class="layui-input name-input">
                     </div>
                 </td>
             </tr>
-            <tr>
+            <!--<tr>
                 <td>采集器编号</td>
                 <td align="right">
                     <div class="layui-input-inline">
                         <input type="password" name="psw"  placeholder="请输入采集器编号" autocomplete="off" class="layui-input">
                     </div>
                 </td>
-            </tr>
+            </tr>-->
             <tr>
                 <td colspan="2">
                     <hr>
@@ -65,14 +66,15 @@
             </tr>
             <tr>
                 <td colspan="2" align="center">
-                   <button type="submit" class="layui-btn" style="width: 200px">提交保存</button>
+                   <button type="submit" class="layui-btn submit-btn" style="width: 200px">提交保存</button>
                 </td>
             </tr>
         </table>
+        <!--</form>-->
     </div>
 
 
-    <script type="text/javascript" src="/think/Public/frame/layui/layui.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/frame/layui/layui.js"></script>
     <script>
         //实例化 layer
         layui.use('layer', function(){
@@ -88,7 +90,7 @@
     </script>
 
 
-    <script type="text/javascript" src="/think/Public/mylib/js/fontchange.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/fontchange.js"></script>
 
 
     <script>
@@ -114,6 +116,32 @@
                 }
             });
 
+            $('.submit-btn').click(function(){
+                var name = $('input[name="name"]').val();
+                $.post(
+                        "<?php echo U('');?>",
+                        {name:name},
+                        function(data){
+                            if(data.status==1){
+                                layer.msg('添加船舶成功！', {
+                                    time: 0 //不自动关闭
+                                    ,btn: ['确定', '继续添加']
+                                    ,yes: function(index){
+                                        layer.close(index);
+                                        window.parent.layer.closeAll();
+                                        window.parent.location.href=data.url;
+                                    },
+                                    btn2:function(index){
+                                        $('.name-input').val(null)
+                                    }
+                                });
+                            }else {
+                                layer.msg(data.info);
+                            }
+                        },
+                        'json'
+                );
+            });
 
 
         });
