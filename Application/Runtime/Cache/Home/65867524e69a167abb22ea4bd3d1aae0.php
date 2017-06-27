@@ -9,12 +9,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/global.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/bootstrap/css/bootstrap.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/frame/layui/css/layui.css" media="all">
-    <link rel="stylesheet" type="text/css" href="/think/Public/mylib/css/common.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/global.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/thinkphp/Public/frame/layui/css/layui.css" media="all">
+    <!--<link rel="stylesheet" type="text/css" href="/thinkphp/Public/mylib/css/common.css" media="all">-->
     <link rel="stylesheet" href="//at.alicdn.com/t/font_lhdrjs93f475vcxr.css">
-    <script type="text/javascript" src="/think/Public/mylib/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/jquery-1.11.1.min.js"></script>
     
     
     <style>
@@ -73,7 +73,7 @@
         <ul class="control-ul my-cf">
             <li>
                 <div align="center">
-                    <img src="/think/Public/mylib/img/danger.png" alt="">
+                    <img src="/thinkphp/Public/mylib/img/danger.png" alt="">
                     <div class="my-margin-t15 my-font-16 my-bolder">故障提醒</div>
                     <button class="my-margin-t15 layui-btn layui-btn-radius layui-btn-primary">已开启</button>
                 </div>
@@ -81,7 +81,7 @@
             </li>
             <li>
                 <div align="center">
-                    <img src="/think/Public/mylib/img/off1.png" alt="">
+                    <img src="/thinkphp/Public/mylib/img/off1.png" alt="">
                     <div class="my-margin-t15 my-font-16 my-bolder">切断2#放电</div>
                     <button class="my-margin-t15 layui-btn layui-btn-radius layui-btn-primary">已开启</button>
                 </div>
@@ -89,7 +89,7 @@
             </li>
             <li>
                 <div align="center">
-                    <img src="/think/Public/mylib/img/off2.png" alt="">
+                    <img src="/thinkphp/Public/mylib/img/off2.png" alt="">
                     <div class="my-margin-t15 my-font-16 my-bolder">切断2#放电</div>
                     <button class="my-margin-t15 layui-btn layui-btn-radius layui-btn-primary">已关闭</button>
                 </div>
@@ -99,7 +99,7 @@
     </div>
 
 
-    <script type="text/javascript" src="/think/Public/frame/layui/layui.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/frame/layui/layui.js"></script>
     <script>
         //实例化 layer
         layui.use('layer', function(){
@@ -115,7 +115,7 @@
     </script>
 
 
-    <script type="text/javascript" src="/think/Public/mylib/js/fontchange.js"></script>
+    <script type="text/javascript" src="/thinkphp/Public/mylib/js/fontchange.js"></script>
 
 
     <script>

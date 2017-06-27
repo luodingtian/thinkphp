@@ -1,0 +1,184 @@
+[ 2017-06-26T00:00:36+08:00 ] ::1 /thinkphp/index.php/Home/Test/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: username D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\6c5f7d6f4e2907317bd8382743d85649.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T00:00:37+08:00 ] ::1 /thinkphp/index.php/Home/Test/myCourse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 219 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 234 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 249 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 264 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 312 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 312 行.
+NOTIC: [8] Undefined variable: nowPage D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 314 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T00:01:07+08:00 ] ::1 /thinkphp/index.php/Home/Test/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: username D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\6c5f7d6f4e2907317bd8382743d85649.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-26T00:01:08+08:00 ] ::1 /thinkphp/index.php/Home/Test/myCourse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 219 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 234 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 249 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 264 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 312 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 312 行.
+NOTIC: [8] Undefined variable: nowPage D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 314 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-06-26T00:01:09+08:00 ] ::1 /thinkphp/index.php/Home/Test/studyPro.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T00:02:06+08:00 ] ::1 /thinkphp/index.php/Home/Test/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: username D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\6c5f7d6f4e2907317bd8382743d85649.php 第 41 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T00:02:06+08:00 ] ::1 /thinkphp/index.php/Home/Test/myCourse.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 219 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 234 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 249 行.
+NOTIC: [8] Undefined variable: vo D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 264 行.
+NOTIC: [8] Undefined variable: page D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 312 行.
+NOTIC: [8] Trying to get property of non-object D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 312 行.
+NOTIC: [8] Undefined variable: nowPage D:\phpStudy\WWW\thinkphp\Application\Runtime\Cache\Home\7c282ce67807a681c816dcadbde632a9.php 第 314 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-06-26T00:02:07+08:00 ] ::1 /thinkphp/index.php/Home/Test/studyPro.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

@@ -1,5 +1,5 @@
 <extend name="Base/base"/>
-<block name="page-title">泛能船舶后台管理</block>
+<block name="page-title">蓝色方程学习系统</block>
 <block name="head">
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/app/css/adminstyle.css" media="all">
 </block>
@@ -10,8 +10,8 @@
 			<!-- logo区域 -->
 			<div class="admin-logo-box">
 				<span class="logo-td">
-					<i class="iconfont icon-admin my-font-25 "></i>
-					<span class="logo-name my-margin-l10" title="logo">后台管理</span>
+					<i class="iconfont icon-code my-font-25 "></i>
+					<span class="logo-name my-margin-l10" title="logo">蓝色方程</span>
 				</span>
 			</div>
 			<!--<div class="larry-side-menu">
@@ -20,11 +20,11 @@
 			<!-- 右侧导航 -->
 			<span class="account">
 					<img class="header-img my-valign-m" src="__PUBLIC__/app/img/head.png" alt="头像" >
-					<span class="my-valign-m my-margin-l5">黑客与画家</span>
+					<span class="my-valign-m my-margin-l5">{$username}</span>
 				</span>
 			<div class="account-wrap">
 				<span class="exit">
-					<a href="login.html" >
+					<a href="{:U('Login/dologout')}" >
 						<i class="iconfont icon-shutdown my-font-25 my-cl-them"></i>
 					</a>
 				</span>
@@ -42,41 +42,25 @@
 						</a>
 					</li>-->
 					<!-- 个人信息 -->
-					<li class="layui-nav-item layui-nav-itemed">
+					<li class="layui-nav-item layui-nav-itemed ">
 						<a href="javascript:;">
-							<i class="iconfont icon-statistic" ></i>
-							<span>后台管理</span>
+							<i class="iconfont icon-code-e" ></i>
+							<span>我的课程</span>
 							<em class="layui-nav-more"></em>
 						</a>
 						<dl class="layui-nav-child">
 							<dd class="layui-this">
-								<a href="javascript:;" data-url="shipList.html">
-									<i class="iconfont icon-ship"></i>
-									<span>船舶列表</span>
+								<a href="javascript:;" data-url="{:U('myCourse')}">
+									<i class="iconfont icon-php"></i>
+									<span>PHP</span>
 								</a>
 							</dd>
+						</dl>
+						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:;" data-url="data.html">
-									<i class="iconfont icon-shuju"></i>
-									<span>数据中心</span>
-								</a>
-							</dd>
-							<dd>
-								<a href="javascript:;" data-url="addShip.html">
-									<i class="iconfont icon-jia" ></i>
-									<span>添加船舶</span>
-								</a>
-							</dd>
-							<dd>
-								<a href="javascript:;" data-url="control.html">
-									<i class="iconfont icon-control" ></i>
-									<span>控制船舶</span>
-								</a>
-							</dd>
-							<dd>
-								<a href="javascript:;" data-url="map.html">
-									<i class="iconfont icon-dingwei" ></i>
-									<span>船舶定位</span>
+								<a href="javascript:;" data-url="">
+									<i class="iconfont icon-h5"></i>
+									<span>HTML</span>
 								</a>
 							</dd>
 						</dl>
@@ -90,11 +74,11 @@
 		<div class="layui-body" id="larry-body" style="bottom: 0;border-left: solid 5px #0099ff;">
 			<div class="layui-tab layui-tab-card larry-tab-box" id="larry-tab" lay-filter="demo" lay-allowclose="true">
 				<ul class="layui-tab-title">
-					<li class="layui-this" id="admin-home"><i class="iconfont icon-ship"></i><em>船舶列表</em></li>
+					<li class="layui-this" id="admin-home"><i class="iconfont icon-ship"></i><em>我的课程</em></li>
 				</ul>
 				<div class="layui-tab-content" style="min-height: 150px; ">
 					<div class="layui-tab-item layui-show">
-						<iframe class="larry-iframe" data-id='0' src="shipList.html"></iframe>
+						<iframe class="larry-iframe" data-id='0' src="{:U('myCourse')}"></iframe>
 					</div>
 				</div>
 			</div>
@@ -104,8 +88,8 @@
 		<!-- 底部区域 -->
 		<div class="layui-footer layui-larry-foot" id="larry-footer">
 			<div class="layui-mian">
-				<div class="larry-footer-left">
-					<a href="http://www.itnang.com">泛能船舶管理&copy;2017</a>
+				<div class="larry-footer-left my-bolder">
+					蓝色方程学习系统&copy;2017
 				</div>
 			</div>
 		</div>
@@ -115,5 +99,5 @@
 <block name="font-change"></block>
 <block name="script">
 	<script type="text/javascript" src="__PUBLIC__/app/js/larry.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/app/js/index.js"></script>
+	<!--<script type="text/javascript" src="__PUBLIC__/app/js/index.js"></script>-->
 </block>

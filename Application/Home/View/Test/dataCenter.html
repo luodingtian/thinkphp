@@ -147,7 +147,7 @@
             cursor: pointer;
         }
         .choose-wrap .layui-input{
-            width: 120px;}
+            width: 180px;}
         .border-checked{
             border: 1px solid #0099ff;
         }
@@ -187,17 +187,15 @@
             </div>
             <span class="my-margin-l5">船舶选择</span>
             <div class="layui-input-inline">
-                <select name="city" lay-verify="required">
-                    <option value=""></option>
-                    <option value="0">育德轮1235885</option>
-                    <option value="1">清华山</option>
-                    <option value="2">广州号</option>
-                    <option value="3">深圳号</option>
-                    <option value="4">杭州号</option>
+                <select name="shipId" lay-verify="required" id="shipSel">
+                    <volist name="shipList" id="vo">
+                        <option value="{$vo.id}" <if condition="$vo['id'] eq $ship['id']">selected="selected"</if>>{$vo.name}</option>
+                    </volist>
                 </select>
 
             </div>
-            <span style="margin-left: 20px;color: #0099ff;cursor: pointer" ><i class="iconfont icon-excel my-margin-r5"></i>导出表格</span>
+            <button id="search" class="layui-btn layui-btn-small my-padding-lr20 my-margin-l20">查询</button>
+            <span style="margin-left: 20px;color: #0099ff;cursor: pointer"  id="export"><i class="iconfont icon-excel my-margin-r5"></i>导出表格</span>
 
             <span class="my-fr">
                 <a href="">
@@ -207,7 +205,8 @@
 
         </div>
     </blockquote>
-    <ul class="total-ul my-cf">
+    <div class="loading-wrap">
+        <!--<ul class="total-ul my-cf">
         <li>
             <div id="panel-v" style="width: 100%;height:300px;"></div>
             <span class="v-title">电压/V</span>
@@ -221,8 +220,8 @@
             <span class="a-title">电流/A</span>
         </li>
     </ul>
-    <span class="info-title">系统状态</span>
-    <div class="data-wrap my-cf my-margin-t20">
+        <span class="info-title">系统状态</span>
+        <div class="data-wrap my-cf my-margin-t20">
         <ul class="data-ul my-cf">
             <li>
                 <div class="my-cl-grey system-title">太阳能发系统</div>
@@ -450,8 +449,8 @@
 
 
         </ul>
+    </div>-->
     </div>
-
 </block>
 <block name="script">
     <script type="text/javascript" src="__PUBLIC__/frame/layui/lay/modules/form.js"></script>
@@ -459,45 +458,80 @@
     <script type="text/javascript" src="__PUBLIC__/mylib/js/echarts.min.js"></script>
 
     <script>
+        var shipId = "{$ship['id']}";
+        $(function () {
+            index();
+            loadingPage('/index.php/Home/Index/load_dataInfo.html?shipId='+shipId);
+
+            $('#search').click(function(){
+                shipId = $('.layui-this').attr('lay-value');
+                loadingPage('/index.php/Home/Index/load_dataInfo.html?shipId='+shipId);
+            });
+        })
+        //动态加载
+        function loadingPage(pageName) {
+            $.ajax({
+                url: pageName,//你对数据库的操作路径
+                type: 'post',//提交方式
+                //dataType:'json',//返回数据的类型
+                success: function (data) {
+                    layer.closeAll();
+                    //  在这里执行对页面的数据刷新
+                    $('.loading-wrap').html($(data))
+                },
+                error: function (data) {
+                    //后台处理数据失败后的回调函数
+                    //   alert(data)
+                }
+            })
+        }
+
+        function index(){
+            var intDiff = 0;//倒计时总秒数量
+            var timer = setInterval(function () {
+                intDiff++;
+                if (intDiff % 30 == 0) {
+                    //console.log(1);
+                    // loadingPage('load_shipinfo.html?id='+sid)
+                }
+            }, 1000);
+        }
+
+
+
+
+    </script>
+
+    <script>
+        var startDate,endDate;
         layui.use(['jquery','layer','element','laypage','laydate','form'],function(){
             window.jQuery = window.$ = layui.jquery;
             window.layer = layui.layer;
             var form = layui.form();
-            var element = layui.element(),
-                    laypage = layui.laypage;
-            laypage({
-                cont: 'page',
-                pages: 10 //总页数
-                ,
-                groups: 5 //连续显示分页数
-                ,
-                jump: function(obj, first) {
-                    //得到了当前页，用于向服务端请求对应数据
-                    var curr = obj.curr;
-                    if(!first) {
-                        //layer.msg('第 '+ obj.curr +' 页');
-                    }
-                }
-            });
+            var element = layui.element();
+
 
 
             var laydate = layui.laydate;
             var start = {
-                min: laydate.now()
-                ,max: '2099-06-16 23:59:59'
+               /* min: laydate.now()
+                ,*/max: '2099-06-16 23:59:59'
                 ,istoday: false
                 ,choose: function(datas){
                     end.min = datas; //开始日选好后，重置结束日的最小日期
-                    end.start = datas //将结束日的初始值设定为开始日
+                    end.start = datas; //将结束日的初始值设定为开始日
+                    console.log(datas);
+                    startDate = datas;
                 }
             };
 
             var end = {
-                min: laydate.now()
-                ,max: '2099-06-16 23:59:59'
+                /*min: laydate.now()
+                ,*/max: '2099-06-16 23:59:59'
                 ,istoday: false
                 ,choose: function(datas){
                     start.max = datas; //结束日选好后，重置开始日的最大日期
+                    endDate = datas;
                 }
             };
             document.getElementById('LAY_demorange_s').onclick = function(){
@@ -508,6 +542,15 @@
                 end.elem = this
                 laydate(end);
             }
+
+            //-----------导出表格 begin------------
+            document.getElementById('export').onclick = function(){
+                shipId = $('.layui-this').attr('lay-value');
+                alert("/index.php/Home/Index/exportShip.html?shipId="+shipId+"/beginDate/"+startDate+"/endDate/"+endDate);
+                window.location.href="/index.php/Home/Index/exportShip.html?shipId="+shipId+"&beginDate="+startDate+"&endDate="+endDate;
+
+            };
+            //-----------导出表格 end--------------
         });
 
 //echarts
@@ -577,6 +620,7 @@
         myChartV.setOption(optionV);
         myChartR.setOption(optionR);
         myChartA.setOption(optionA);
+
 
 
 
